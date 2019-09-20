@@ -1,12 +1,10 @@
 function getMyDetails() {
-  console.log("getMyDetails");
   return $.ajax({
     url: "/users/me",
   });
 }
 
 function logOut() {
-  console.log("logout");
   return $.ajax({
     method: "POST",
     url: "/users/logout",
@@ -14,7 +12,6 @@ function logOut() {
 }
 
 function logIn(data) {
-  console.log("login");
   return $.ajax({
     method: "POST",
     url: "/users/login",
@@ -23,7 +20,6 @@ function logIn(data) {
 }
 
 function signUp(data) {
-  console.log("sigup");
   return $.ajax({
     method: "POST",
     url: "/users",
@@ -32,7 +28,6 @@ function signUp(data) {
 }
 
 function getAllListings(params) {
-  console.log("get all listings")
   let url = "/api/properties";
   if (params) {
     url += "?" + params;
@@ -43,7 +38,6 @@ function getAllListings(params) {
 }
 
 function getAllReservations() {
-  console.log('getAllReservations')
   let url = "/api/reservations";
   return $.ajax({
     url,
@@ -51,7 +45,6 @@ function getAllReservations() {
 }
 
 const submitProperty = function(data) {
-  console.log('submit property')
   return $.ajax({
     method: "POST",
     url: "/api/properties",
